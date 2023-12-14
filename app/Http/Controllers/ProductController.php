@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreProductRequest;
 use App\Models\Product;
 use Illuminate\Http\Request;
+
+// $heading = 'Products';
 
 class ProductController extends Controller
 {
@@ -20,15 +23,25 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('product.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
-        //
+        Product::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'in_stock' => $request->stock,
+            'unit_cost' => $request->unit_cost,
+            'unit_price' => $request->unit_price,
+        ]);
+
+        session()->flash('success', 'Product save successfully');
+
+        return redirect()->route('product.create');
     }
 
     /**

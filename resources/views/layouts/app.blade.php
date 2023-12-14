@@ -77,7 +77,7 @@
 
         <header class="header">
             <div class="container">
-                 <h2>@yield('header')</h2>
+                @yield('header')
             </div>
         </header>
 
