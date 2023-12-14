@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('description')->nullable();
-            $table->integer('in_stock')->default('0')->nullable();
-            $table->float('unit_cost')->default('0')->nullable();
-            $table->float('unit_price')->default('0')->nullable();
+            $table->integer('in_stock')->nullable()->default(0);
+            $table->double('unit_cost')->nullable()->default(0);
+            $table->double('unit_price')->nullable()->default(0);
             $table->timestamps();
         });
     }
