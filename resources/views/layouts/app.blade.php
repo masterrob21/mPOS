@@ -76,7 +76,9 @@
         </nav>
 
         <header class="header">
-            @yield('header')
+            <div class="container">
+                 <h2>@yield('header')</h2>
+            </div>
         </header>
 
         <main class="py-4">

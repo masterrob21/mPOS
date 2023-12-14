@@ -1,9 +1,7 @@
 @extends('layouts.app')
 
 @section('header')
-<div class="container">
-  <h2>Products</h2>
-</div>
+  Products
 @endsection
 
 @section('content')
