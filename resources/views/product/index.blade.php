@@ -7,6 +7,7 @@
 @section('content')
 <div class="container">
   <h2>List of Products</h2>
+  <a href="{{ route('product.create') }}" class="btn btn-warning my-3">New Product</a>
   <div class="table-responsive">
     <table class="table">
       <thead>
